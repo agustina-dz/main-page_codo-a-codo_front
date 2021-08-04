@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap');
+:root {
+    --rojo4: #D86246;
+    --rojo3: #E28670;
+    --rojo2: #F2CEC5;
+    --rojo1: #F7E5E1;
+    /*---*/
+    --blanco: #F6F4F4;
+    /*---*/
+    --azul1: #D5D8DA;
+    --azul2: #A3ADB3;
+    --azul3: #71818B;
+    --azul4: #2F3947;
+}
+
+
+/* -> GENERAL <- */
+
+body {
+    font-family: 'Cabin';
+    background-color: var(--blanco);
+}
+
+h1,
+h2 {
+    font-family: 'Bree Serif';
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+
+/* -> HEADER <- */
+
+.img-logo {
+    width: 50px;
+}
+
+.img-logo:hover,
+.categorias img:hover {
+    filter: drop-shadow(0 0 5px var(--azul2));
+}
+
+.navbar-brand {
+    color: var(--rojo4);
+}
+
+.navbar-brand:hover {
+    color: var(--azul3);
+}
+
+.img-redes {
+    width: 20px;
+}
+
+.nav-link {
+    color: var(--azul4);
+}
+
+.nav-link:hover,
+.nav-link:focus {
+    color: var(--rojo3);
+}
+
+.btn-outline {
+    color: var(--rojo4);
+    border-color: var(--rojo4);
+}
+
+.btn-outline:hover,
+.btn-rojo:hover {
+    color: var(--blanco);
+    background-color: var(--rojo4);
+    border-color: var(--rojo4);
+}
+
+.btn-rojo {
+    color: var(--blanco);
+    background-color: var(--rojo3);
+}
+
+
+/*modales-inicio_sesion-registro*/
+
+.modal-body img {
+    height: 95px;
+}
+
+.modal a {
+    color: var(--rojo4);
+}
+
+.modal .dropdown-item:active {
+    color: var(--blanco);
+    text-decoration: none;
+    background-color: var(--rojo3);
+}
+
+.modal .dropdown-item:hover {
+    background-color: var(--rojo1);
+}
+
+.form-check-input:checked {
+    background-color: var(--rojo3);
+    border-color: var(--rojo3);
+}
+
+.form-check-input:focus {
+    border-color: var(--rojo2);
+    outline: 0;
+    box-shadow: 0 0 0 .25rem #E2867080;
+}
+
+
+/* -> BANNER <- */
+
+.banner {
+    background: linear-gradient(180deg, rgba(66, 22, 9, 0.3) 0%, rgba(0, 0, 0, 0.3) 100%), url(../imgs/banner.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.name-link {
+    text-decoration: none;
+}
+
+.name-link:hover {
+    text-decoration: underline;
+}
+
+.form-control:focus,
+.btn:focus {
+    border-color: var(--rojo3);
+    box-shadow: 0 0 0 .25rem #D8624680;
+}
+
+
+/* -> MAIN <- */
+
+.divider::before {
+    content: "⚜";
+    color: var(--rojo2);
+}
+
+
+/*carousel*/
+
+.corusel-item .active {
+    display: flex !important;
+    justify-content: center !important;
+}
+
+.carousel-indicators {
+    bottom: -50px;
+}
+
+img[alt="portada"] {
+    height: 200px;
+}
+
+.carousel-control-prev-icon {
+    background-image: url(../imgs/left-arrow.svg);
+}
+
+.carousel-control-next-icon {
+    background-image: url(../imgs/right-arrow.svg);
+}
+
+.carousel-indicators [data-bs-target] {
+    background-color: var(--rojo4);
+}
+
+.mi-carousel .modal-footer a {
+    color: var(--blanco) !important;
+}
+
+
+/*categorias*/
+
+.categorias img {
+    height: 100px;
+    cursor: pointer;
+}
+
+
+/*about*/
+
+.about img {
+    max-height: 300px;
+}
+
+
+/* -> FOOTER <- */
+
+footer {
+    background-color: var(--azul4);
+    color: var(--blanco);
+}
+
+footer li:hover {
+    cursor: pointer;
+    color: var(--rojo2);
+}
+
+footer li:not(:last-child)::after {
+    content: " 〆 ";
+    color: var(--rojo4);
+}
+
+.footer-name-link {
+    color: var(--azul3);
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    footer li::after {
+        content: " 〆 ";
+        color: var(--rojo4);
+    }
+}
